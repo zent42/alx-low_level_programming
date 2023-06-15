@@ -1,10 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - print by using puts function
- * The program print "Programming is like building a multilingual puzzle
- * Return: 0
- */
+ * main - Entry point
+ *
+ * Description: A C program that prints with put function
+ *
+ * Return: Always 0 (Success)
+*/
+
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
