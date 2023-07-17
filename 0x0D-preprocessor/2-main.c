@@ -7,6 +7,6 @@
 */
 int main(void)
 {
-printf("This program is running from: %s\n", "UNIQUE_IDENTIFIER_FILE");
+printf("%s\n", "UNIQUE_IDENTIFIER_FILE");
 return (0);
 }
