@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
-* main - prints the name of the file
+* main - prints the name of the file(filles > > output)
 *
 *Return: Always 0 (Success)
 */
 int main(void)
 {
-printf("%s\n", "UNIQUE_IDENTIFIER_FILE");
+printf("This program is running from: %s\n", "UNIQUE_IDENTIFIER_FILE");
 return (0);
 }
