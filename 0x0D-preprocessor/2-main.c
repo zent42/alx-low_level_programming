@@ -7,6 +7,6 @@
 */
 int main(void)
 {
-printf("This program is executed.\n");
+printf("Source code file: %s\n", FILE);
 return (0);
 }
