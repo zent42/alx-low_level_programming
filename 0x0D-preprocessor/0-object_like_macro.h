@@ -1,6 +1,6 @@
-#ifndef MY_HEADER_FILE_H
-#define MY_HEADER_FILE_H
+#ifndef CUSTOM_OBJECT_LIKE_MACRO_H
+#define CUSTOM_OBJECT_LIKE_MACRO_H
 
-#define BUFFER_SIZE 1024
+#define CUSTOM_SIZE 1024
 
 #endif
