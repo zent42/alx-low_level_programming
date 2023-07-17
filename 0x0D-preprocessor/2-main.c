@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - prints the name of the file
+ * main - prints a custom message indicating the program's execution
  *
- * Return: Always 0 (Success)
+ * Return: Always 0 (Success!)
  */
 int main(void)
 {
-	printf("This program is running from: %s\n", "UNIQUE_IDENTIFIER_FILE");
+	printf("%s\n", __FILE__);
 
 	return (0);
 }
