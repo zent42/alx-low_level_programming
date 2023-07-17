@@ -1,0 +1,6 @@
+#ifndef UNIQUE_IDENTIFIER_H
+#define UNIQUE_IDENTIFIER_H
+
+#define PI 3.14159265359
+
+#endif
