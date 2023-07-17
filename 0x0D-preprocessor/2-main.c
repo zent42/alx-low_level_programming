@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
-
-main - prints a custom message indicating the current file name
-Return: Always 0 (Success)
+*main - Shows the name of the file(print name of the file required!)
+*
+*Return: Always 0 (Success)
 */
 int main(void)
 {
-printf("Current file: %s\n", FILE);
+printf("This program is executed.\n");
 return (0);
 }
