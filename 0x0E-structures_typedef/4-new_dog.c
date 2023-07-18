@@ -7,20 +7,22 @@
  *
  * Return: the length of the string
  */
-int get_string_length(char *str)
+int _strlen(char *s)
 {
-int length = 0;
+int i;
 
-while (str[length] != '\0')
+i = 0;
+
+while (s[i] != '\0')
 {
-length++;
+i++;
 }
 
-return (length);
+return (i);
 }
 
 /**
- * *_strcpy - copies the string pointed to by src
+ * _strcpy - copies the string pointed to by src
  * including the terminating null byte (\0)
  * to the buffer pointed to by dest
  * @dest: pointer to the buffer in which we copy the string
@@ -28,12 +30,18 @@ return (length);
  *
  * Return: the pointer to dest
  */
-char *copy_string(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
-int length = get_string_length(src);
-int i;
+int len, i;
 
-for (i = 0; i < length; i++)
+len = 0;
+
+while (src[len] != '\0')
+{
+len++;
+}
+
+for (i = 0; i < len; i++)
 {
 dest[i] = src[i];
 }
@@ -43,42 +51,43 @@ return (dest);
 }
 
 /**
- * new_dog - creates a new dog
- * @name: name of the dog
- * @age: age of the dog
- * @owner: owner of the dog
- *
- * Return: pointer to the new dog (Success), NULL otherwise
- */
-dog_t *create_dog(char *name, float age, char *owner)
+* new_pet - creates a new pet
+* @name: name of the pet
+* @age: age of the pet
+* @owner: owner of the pet
+*
+* Return: pointer to the new pet (Success), NULL otherwise
+*/
+pet_t *new_pet(char *name, float age, char *owner)
 {
-dog_t *dog;
-int name_length, owner_length;
+pet_t *pet;
+int len1, len2;
 
-name_length = get_string_length(name);
-owner_length = get_string_length(owner);
+len1 = _strlen(name);
+len2 = _strlen(owner);
 
-dog = malloc(sizeof(dog_t));
-if (dog == NULL)
+pet = malloc(sizeof(pet_t));
+if (pet == NULL)
 return (NULL);
 
-dog->name = malloc(sizeof(char) * (name_length + 1));
-if (dog->name == NULL)
+pet->name = malloc(sizeof(char) * (len1 + 1));
+if (pet->name == NULL)
 {
-free(dog);
-return (NULL);
-dog->owner = malloc(sizeof(char) * (owner_length + 1));
-if (dog->owner == NULL)
-{
-free(dog)
-free(dog->name);
+free(pet);
 return (NULL);
 }
 
-copy_string(dog->name, name);
-copy_string(dog->owner, owner);
-dog->age = age;
+pet->owner = malloc(sizeof(char) * (len2 + 1));
+if (pet->owner == NULL)
+{
+free(pet);
+free(pet->name);
+return (NULL);
+}
 
-return (dog);
+_strcpy(pet->name, name);
+_strcpy(pet->owner, owner);
+pet->age = age;
+return (pet);
 }
 
