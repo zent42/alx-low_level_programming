@@ -1,18 +1,15 @@
 #include <stdlib.h>
 #include "function_pointers.h"
-
 /**
-* display_name - displays a name
-* @name: name to display
-* @display_func: pointer to the display function
-*
-* Description: This function displays a name using a given display function.
+* print_name - prints a name
+* @name: name to print
+* @f: pointer to the printing function
 */
-void display_name(char *name, void (*display_func)(char *))
+void print_name(char *name, void (*f)(char *))
 {
-if (!name || !display_func)
+if (name == NULL || f == NULL)
 return;
-
-display_func(name);
+f(name);
 }
+
 
