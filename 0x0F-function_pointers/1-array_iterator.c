@@ -1,6 +1,5 @@
-#include <stddef.h> /* For using size_t */
-
-/**
+#include <stddef.h>
+/*
 * my_array_iterator - executes a function given as a parameter
 * on each element of an array
 * @array: array to iterate over
@@ -9,12 +8,11 @@
 */
 void my_array_iterator(int *array, size_t size, void (*action)(int))
 {
-if (array == NULL || action == NULL)
-return;
-
-size_t i;
-for (i = 0; i < size; i++)
+if (array && action)
+{
+for (size_t i = 0; i < size; i++)
 action(array[i]);
+}
 }
 
 
