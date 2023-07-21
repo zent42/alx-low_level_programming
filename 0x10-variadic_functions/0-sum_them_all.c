@@ -1,23 +1,25 @@
 #include <stdarg.h>
 /**
-* add_numbers - calculates the sum of all its parameters
-* @num_args: number of arguments passed to the function
+* sum_them_all - calculates the sum of all its parameters
+* @n: number of arguments passed to the function
 *
 * Return: the resulting sum
 */
-int add_numbers(const unsigned int num_args, ...)
+int sum_them_all(const unsigned int n, ...)
 {
+va_list args;
 unsigned int i;
 int sum = 0;
-va_list args_list;
 
-va_start(args_list, num_args);
+va_start(args, n);
 
-for (i = 0; i < num_args; i++)
-sum += va_arg(args_list, int);
+for (i = 0; i < n; i++) {
+sum += va_arg(args, int);
+}
 
-va_end(args_list);
+va_end(args);
 
 return (sum);
 }
+
 
