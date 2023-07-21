@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
-* custom_print_numbers - prints numbers given as parameters
+* print_numbers - prints numbers given as parameters
 * @separator: string to be printed between numbers
 * @num_values: number of integers passed to the function
 */
