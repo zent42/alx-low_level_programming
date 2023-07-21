@@ -1,4 +1,3 @@
-// my_variadic_functions.h
 #ifndef VAR_FUNC_H
 #define VAR_FUNC_H
 
