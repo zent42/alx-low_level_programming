@@ -1,6 +1,0 @@
-#ifndef UNIQUE_IDENTIFIER_H
-#define UNIQUE_IDENTIFIER_H
-
-#define SIZE 1024
-
-#endif
