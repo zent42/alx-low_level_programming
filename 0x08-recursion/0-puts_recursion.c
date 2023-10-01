@@ -1,16 +1,16 @@
 #include "main.h"
-/**
- * printStringRecursively - prints a string, followed by a new line
- * @str: string to print
- */
-void printStringRecursively(char *str)
-{
-if (*str == '\0')
-{
-_putchar('\n');
-return;
-}
-_putchar(*str);
-printStringRecursively(str + 1);
-}
 
+/**
+ * _puts_recursion - prints a string, followed by a new line
+ * @s: string to print
+ */
+void _puts_recursion(char *s)
+{
+	if (*s == '\0')
+	{
+		_putchar('\n');
+		return;
+	}
+	_putchar(*s);
+	_puts_recursion(s + 1);
+}
